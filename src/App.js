@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Stories from "./components/Stories";
@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        <Header />
         <div className="content">
           <Switch>
             <Route exact path="/">

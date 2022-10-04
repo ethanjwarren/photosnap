@@ -1,12 +1,39 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Stories from "./components/Stories";
+import Features from "./components/Features";
+import Pricing from "./components/Pricing";
+import NotFound from "./components/NotFound";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/stories">
+              <Stories />
+            </Route>
+            <Route path="/features">
+              <Features />
+            </Route>
+            <Route path="/pricing">
+              <Pricing />
+            </Route>
+            <Route path="*">
+              <NotFound />
+            </Route>
+          </Switch>
+        </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

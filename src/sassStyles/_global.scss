@@ -12,12 +12,89 @@ body {
     padding: 0;
 }
 
-.App {
+.app {
     font-family: sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
 }
+
+/*------------------------------------*\
+    Main site structure
+\*------------------------------------*/
+
+.l-container {
+    @include flex-row;
+    justify-content: space-between;
+    max-width: $primary-content-width;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+/*------------------------------------*\
+    Button Styling
+\*------------------------------------*/
+
+.button {
+    font-family: $primary-font-family;
+    font-size: 1.2rem;
+    font-weight: $font-bold;
+    line-height: 1.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: fit-content;
+    &-one {
+        padding: 1.2rem 2.4rem;
+        border: none;
+        background-color: $color-primary;
+        color: $color-secondary;
+        &:hover {
+            color: $color-primary;
+            background-color: $color-tertiary;
+            cursor: pointer;
+        }
+    }
+    &-two {
+        color: $color-primary;
+    }
+}
+
+/*------------------------------------*\
+    Header
+\*------------------------------------*/
+
+.header {
+    & .l-container {
+        padding: 1.6rem 2rem;
+        align-items: center;
+    }
+    &-nav {
+        @include flex-row;
+        justify-content: space-between;
+        gap: 3.7rem;
+    }
+    &-link {
+        color: $color-primary;
+        font-family: $primary-font-family;
+        font-weight: $font-bold;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+            color: $color-tertiary;
+        }
+    }
+}
+
+
+
+/*------------------------------------*\
+    Footer
+\*------------------------------------*/
 
 footer {
     background-color: #000;

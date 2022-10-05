@@ -10,9 +10,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="app">
         <Header />
-        <div className="content">
+        <main className="app-content">
           <Switch>
             <Route exact path="/">
               <Home />
@@ -30,7 +30,7 @@ function App() {
               <NotFound />
             </Route>
           </Switch>
-        </div>
+        </main>
         <Footer />
       </div>
     </Router>

@@ -10,14 +10,6 @@ import InstagramImg from "../assets/shared/desktop/instagram.svg";
 const Footer = () => {
   const year = new Date().getFullYear();
 
-  const SocialLinks = [
-    { title: "Facebook", image: { FacebookImg }, link: "#" },
-    { title: "Youtube", image: { YoutubeImg }, link: "#" },
-    { title: "Twitter", image: { TwitterImg }, link: "#" },
-    { title: "Pinterest", image: { PinterestImg }, link: "#" },
-    { title: "Instagram", image: { InstagramImg }, link: "#" },
-  ];
-
   return (
     <footer className="footer">
       <div className="l-container">

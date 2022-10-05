@@ -1,0 +1,43 @@
+/* Typography */
+
+body {
+    color: $color-primary;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-family: $primary-font-family;
+}
+
+h1 {
+    color: $color-primary;
+    font-size: 4rem;
+    font-weight: $font-bold;
+    line-height: 4.8rem;
+    letter-spacing: 4.17px;
+    font-family: $primary-font-family;
+}
+
+h2 {
+    color: $color-primary;
+    font-size: 2.4rem;
+    line-height: 4.8rem;
+    font-family: $primary-font-family;
+}
+
+h3 {
+    color: $color-primary;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    font-family: $primary-font-family;
+}
+
+h4 {
+    color: $color-primary;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 2px;
+    font-family: $primary-font-family;
+}
+
+p {
+
+}

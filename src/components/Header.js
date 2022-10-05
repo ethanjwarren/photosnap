@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import LogoImg from "../assets/shared/desktop/logo.svg";
 
 const Header = () => {
@@ -9,18 +10,30 @@ const Header = () => {
           <img src={LogoImg} alt="photosnap homepage" width={170} height={16} />
         </Link>
         <nav className="header-nav">
-          <Link to="/stories" className="header-link">
+          <NavLink
+            to="/stories"
+            className="header-link"
+            activeClassName="header-link__active"
+          >
             Stories
-          </Link>
-          <Link to="/features" className="header-link">
+          </NavLink>
+          <NavLink
+            to="/features"
+            className="header-link"
+            activeClassName="header-link__active"
+          >
             Features
-          </Link>
-          <Link to="/pricing" className="header-link">
+          </NavLink>
+          <NavLink
+            to="/pricing"
+            className="header-link"
+            activeClassName="header-link__active"
+          >
             Pricing
-          </Link>
+          </NavLink>
         </nav>
-        <Link to="#">
-          <button className="button button-one">Get an invite</button>
+        <Link to="#" className="button button-one">
+          Get an invite
         </Link>
       </div>
     </header>

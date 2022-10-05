@@ -44,6 +44,7 @@ body {
     line-height: 1.6rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+    text-decoration: none;
     width: fit-content;
     &-one {
         padding: 1.2rem 2.4rem;
@@ -87,6 +88,9 @@ body {
         &:hover {
             color: $color-tertiary;
         }
+        &__active {
+            color: $color-tertiary;
+        }
     }
 }
 
@@ -96,9 +100,23 @@ body {
     Footer
 \*------------------------------------*/
 
-footer {
+.footer {
     background-color: #000;
     text-align: center;
     margin-top: auto;
-    padding: 8px;
+    padding: 6.4rem 0;
+    &-column {
+        @include flex-column;
+        justify-content: space-between;
+        gap: 8.5rem;
+        align-items: flex-start;
+    }
+    &-social {
+        @include flex-row;
+        gap: 13px;
+        & img {
+            filter: sepia(100%) grayscale(100%) brightness(20);
+            width: 100%;
+        }
+    }
 }

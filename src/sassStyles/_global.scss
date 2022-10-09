@@ -160,7 +160,7 @@ body {
 .stories-hero {
     background-repeat: no-repeat;
     object-fit: cover;
-    background-size: 100%;
+    background-size: cover;
     &__internal {
         @include flex-row;
         max-height: 65rem;
@@ -207,7 +207,6 @@ body {
     p {
         opacity: 0.6;
     }
-
 }
 
 
@@ -267,6 +266,7 @@ body {
 
 .stories-area {
     @include flex-row;
+    flex-wrap: wrap;
     &__item {
         position: relative;
         background-size: cover;
@@ -334,13 +334,15 @@ body {
 .features-area {
     padding: 12rem 0;
     & .l-container {
-        gap: 3rem
+        @include flex-row;
+        flex-wrap: wrap;
+        gap: 10.4rem 3rem
     }
     &__item {
         @include flex-column;
         align-items: center;
         justify-content: space-between;
-        width: 32%;
+        width: 30%;
         text-align: center;
         height: 236px;
     }
@@ -356,7 +358,7 @@ body {
     }
     & p {
         flex: 1;
-        margin: aut;
+        margin: auto;
     }
 }
 

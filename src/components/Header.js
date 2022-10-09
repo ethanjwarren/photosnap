@@ -9,6 +9,7 @@ const Header = () => {
         <Link to="/" className="header-logo" aria-current="page">
           <img src={LogoImg} alt="photosnap homepage" width={170} height={16} />
         </Link>
+
         <nav className="header-nav">
           <NavLink
             to="/stories"

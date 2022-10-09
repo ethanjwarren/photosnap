@@ -1,0 +1,31 @@
+/* Header */
+
+.header {
+    & .l-container {
+        padding: 1.6rem 2rem;
+        align-items: center;
+    }
+    &-nav {
+        @include flex-row;
+        justify-content: space-between;
+        gap: 3.7rem;
+    }
+    &-link {
+        color: $color-primary;
+        font-family: $primary-font-family;
+        font-weight: $font-bold;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $color-tertiary;
+        }
+
+        &__active {
+            color: $color-tertiary;
+        }
+    }
+}

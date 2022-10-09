@@ -496,6 +496,42 @@ body {
     }
 }
 
+.pricing-table {
+    @include flex-column;
+    align-items: center;
+    margin-bottom: 16rem;
+
+    h2 {
+        margin: 0px 0px 5.6rem;
+    }
+}
+
+table {
+    font-weight: $font-bold;
+    font-size: 1.2rem;
+    line-height: 15.62px;
+    letter-spacing: 2px;
+    border-collapse: collapse;
+    th {
+        border-bottom: 1px solid $color-primary;
+        padding-bottom: 2.4rem;
+        min-width: 14rem;
+        :first-child {
+            text-align: left;
+        }
+    }
+    td:not(:first-child) {
+        text-align: center;
+    }
+    td:first-child {
+        padding-right: 4.8rem;
+    }
+    td {
+        padding: 2.4rem 0;
+        border-bottom: 1px solid hsl(0, 0, 88%);
+    }
+}
+
 
 
 /*------------------------------------*\

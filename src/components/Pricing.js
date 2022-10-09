@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import HeroArea from "./utils/HeroArea";
+import iconcheck from "../assets/pricing/desktop/check.svg";
 
 const Pricing = () => {
   const [toggle, setToggle] = useState("monthly");
@@ -74,6 +75,93 @@ const Pricing = () => {
             <button>PICK PLAN</button>
           </div>
         </div>
+      </section>
+      <section className="pricing-table">
+        <h2>COMPARE</h2>
+        <table>
+          <tr>
+            <th style={{ textAlign: "left" }}>THE FEATURES</th>
+            <th>BASIC</th>
+            <th>PRO</th>
+            <th>BUSINESS</th>
+          </tr>
+          <tr>
+            <td>UNLIMITED STORY POSTING</td>
+            <td>
+              <img src={iconcheck} alt="available"></img>
+            </td>
+            <td>
+              <img src={iconcheck} alt="available"></img>
+            </td>
+            <td>
+              <img src={iconcheck} alt="available"></img>
+            </td>
+          </tr>
+          <tr>
+            <td>UNLIMITED PHOTO UPLOAD</td>
+            <td>
+              <img src={iconcheck} alt="available"></img>
+            </td>
+            <td>
+              <img src={iconcheck} alt="available"></img>
+            </td>
+            <td>
+              <img src={iconcheck} alt="available"></img>
+            </td>
+          </tr>
+          <tr>
+            <td>EMBEDDING CUSTOM CONTENT</td>
+            <td></td>
+            <td>
+              <img src={iconcheck} alt="available"></img>
+            </td>
+            <td>
+              <img src={iconcheck} alt="available"></img>
+            </td>
+          </tr>
+          <tr>
+            <td>CUSTOMIZE METADATA</td>
+            <td></td>
+            <td>
+              <img src={iconcheck} alt="available"></img>
+            </td>
+            <td>
+              <img src={iconcheck} alt="available"></img>
+            </td>
+          </tr>
+          <tr>
+            <td>ADVANCED METRICS</td>
+            <td></td>
+            <td></td>
+            <td>
+              <img src={iconcheck} alt="available"></img>
+            </td>
+          </tr>
+          <tr>
+            <td>PHOTO DOWNLOADS</td>
+            <td></td>
+            <td></td>
+            <td>
+              <img src={iconcheck} alt="available"></img>
+            </td>
+          </tr>
+          <tr>
+            <td>SEARCH ENGINE INDEXING</td>
+            <td></td>
+            <td></td>
+            <td>
+              <img src={iconcheck} alt="available"></img>
+            </td>
+          </tr>
+          <tr>
+            <td>CUSTOM ANALYTICS</td>
+            <td></td>
+            <td></td>
+            <td>
+              <img src={iconcheck} alt="available"></img>
+            </td>
+          </tr>
+        </table>
       </section>
     </div>
   );

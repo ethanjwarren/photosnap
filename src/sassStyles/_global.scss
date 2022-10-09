@@ -362,6 +362,141 @@ body {
     }
 }
 
+/*------------------------------------*\
+    Pricing
+\*------------------------------------*/
+
+.pricing-area {
+    &__toggle {
+        @include flex-row;
+        align-items: center;
+        justify-content: center;
+        margin: 12rem 0 4.8rem 0;
+        & button {
+            width: 6.4rem;
+            height: 3.2rem;
+            border: none;
+            border-radius: 1.6rem;
+            margin: 0 3.2rem;
+            background-color: hsl(0, 0, 88%);
+            cursor: pointer;
+            & div {
+                height: 2.4rem;
+                width: 2.4rem;
+                border-radius: 1.2rem;
+                background-color: $color-primary;
+            }
+        }
+        & p {
+            font-weight: $font-bold;
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+            color: hsla(0, 0, 0, 0.5);
+        }
+    }
+}
+
+.pricing-area__options {
+    @include flex-row;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 16.5rem 16rem;
+    & div {
+        @include flex-column;
+        align-items: center;
+        text-align: center;
+        box-sizing: border-box;
+        min-width: 35rem;
+        max-width: 35rem;
+        h3 {
+            font-weight: $font-bold;
+            font-size: 2.4rem;
+            margin: 0;
+        }
+        & .pricing-area__description {
+            margin: 1.8rem 0 4rem;
+        }
+        .pricing-area__price {
+            font-weight: $font-bold;
+            font-size: 4rem;
+            line-height: 4.8rem;
+            letter-spacing: 4.17px;
+            margin: 0;
+        }
+
+        .pricing-area__per {
+            margin: 0;
+            margin-bottom: 4rem;
+        }
+        button {
+            border: none;
+            font-family: inherit;
+            font-weight: $font-bold;
+            font-size: 1.2rem;
+            line-height: 15.62px;
+            letter-spacing: 2px;
+            width: 100%;
+            padding: 1.2rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.pricing-area__outer {
+    background-color: hsl(0, 0, 96%);
+    padding: 4rem;
+    .pricing-area__description,
+    .pricing-area__per {
+        color: hsla(0, 0, 0, 0.6);
+    }
+    button {
+        color: $color-secondary;
+        background-color: $color-primary;
+
+        &:hover {
+            background-color: hsl(0, 0, 88%);
+            color: black;
+        }
+    }
+}
+
+.pricing-area__inner {
+    background-color: black;
+    color: white;
+    padding: 4rem;
+    margin: 0 3rem;
+    border-top: 3.2rem solid $color-primary;
+    border-bottom: 3.2rem solid $color-primary;
+    position: relative;
+    & h3 {
+        color: $color-secondary;
+    }
+    .pricing-area__description,
+    .pricing-area__per {
+        color: hsla(0, 0, 100%, 0.6);
+    }
+    button {
+        color: $color-primary;
+        background-color: $color-secondary;
+        &:hover {
+            background-color: hsl(0, 0, 88%);
+            color: $color-primary;
+        }
+    }
+    &::before {
+        position: absolute;
+        content: " ";
+        width: 35rem;
+        height: 6px;
+        background: linear-gradient(26.57deg,
+                #ffc593 0%,
+                #bc7198 43.29%,
+                #5a77ff 83.33%);
+        transform: translateY(-1200%);
+    }
+}
+
+
 
 /*------------------------------------*\
     Footer

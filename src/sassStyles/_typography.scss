@@ -37,3 +37,12 @@ h4 {
     letter-spacing: 2px;
     font-family: $primary-font-family;
 }
+
+.strapline {
+    color: $color-secondary;
+    font-size: 1.2rem;
+    font-weight: $font-bold;
+    line-height: 1.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

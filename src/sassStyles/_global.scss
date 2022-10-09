@@ -153,6 +153,71 @@ body {
     display: none;
 }
 
+/*------------------------------------*\
+    Stories Hero
+\*------------------------------------*/
+
+.stories-hero {
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: 100%;
+    &__internal {
+        @include flex-row;
+        max-height: 65rem;
+    }
+    &__content {
+        width: 27%;
+        @include flex-column;
+        justify-content: center;
+        margin: 12.2rem;
+        & h1,
+        & h2,
+        & p {
+            color: $color-secondary;
+        }
+    }
+    & .strapline {
+        margin-bottom: 2.4rem;
+    }
+    & h1 {
+        text-transform: uppercase;
+        margin-bottom: 1.6rem;
+    }
+    &__info {
+        @include flex-row;
+        justify-content: flex-start;
+        gap: .9rem;
+        margin-bottom: 2.4rem;
+        & .date {
+            font-size: 1.3rem;
+            color: $color-secondary;
+            opacity: 0.75;
+        }
+        & p.author {
+            opacity: 1;
+        }
+    }
+    & .button-two {
+        color: $color-secondary;
+        margin-top: 2.4rem;
+        &:after {
+            filter: invert(1)
+        }
+    }
+    p {
+        opacity: 0.6;
+    }
+
+}
+
+
+.pricing-content .hero-area__content a {
+    display: none;
+}
+
+.features-content .hero-area__content a {
+    display: none;
+}
 
 
 /*------------------------------------*\
@@ -294,6 +359,7 @@ body {
         margin: aut;
     }
 }
+
 
 /*------------------------------------*\
     Footer

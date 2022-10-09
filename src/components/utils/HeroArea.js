@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const HeroInternal = ({ image, imgAlt, heading, text, linkText }) => {
+const HeroArea = ({ image, imgAlt, heading, text, linkText }) => {
   return (
     <div className="hero-area__internal">
       <div className="hero-area__content">
@@ -17,4 +17,4 @@ const HeroInternal = ({ image, imgAlt, heading, text, linkText }) => {
   );
 };
 
-export default HeroInternal;
+export default HeroArea;

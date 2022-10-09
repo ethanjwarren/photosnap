@@ -1,5 +1,7 @@
+import React, { useState } from "react";
+
 const Stories = () => {
-  return <h1>Stories</h1>;
+  return <div className="stories-content"></div>;
 };
 
 export default Stories;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const GridItem = ({ image, imgAlt, heading, text, linkText }) => {
+const GridItem = ({ headingType, image, imgAlt, heading, text, linkText }) => {
   return (
     <div className="grid-area__item">
       <div className="grid-area__content">

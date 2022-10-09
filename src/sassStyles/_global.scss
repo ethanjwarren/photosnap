@@ -100,6 +100,62 @@ body {
 }
 
 /*------------------------------------*\
+    Hero Area
+\*------------------------------------*/
+
+.hero-area {
+    &__internal {
+        @include flex-row;
+        max-height: 49rem;
+    }
+    &__content {
+        width: 42%;
+        background-color: $color-primary;
+        padding: 0 11.1rem;
+        @include flex-column;
+        justify-content: center;
+        & h1,
+        & h2,
+        & p {
+            color: $color-secondary;
+        }
+    }
+    &__media {
+        width: 58%;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    & h1 {
+        text-transform: uppercase;
+        margin-bottom: 2.1rem;
+    }
+    & .button-two {
+        color: $color-secondary;
+        margin-top: 4.8rem;
+        &:after {
+            filter: invert(1)
+        }
+    }
+    .home-content &__internal {
+        max-height: 650px;
+    }
+}
+
+
+.pricing-content .hero-area__content a {
+    display: none;
+}
+
+.features-content .hero-area__content a {
+    display: none;
+}
+
+
+
+/*------------------------------------*\
     Grid Items
 \*------------------------------------*/
 
@@ -107,28 +163,8 @@ body {
     &__item {
         @include flex-row;
         max-height: 65rem;
-        &:nth-of-type(even) {
+        &:nth-of-type(odd) {
             flex-direction: row-reverse;
-        }
-        &:first-child .grid-area__content {
-            background-color: $color-primary;
-            & h1, & h2, & p {
-                color: $color-secondary;
-            }
-            & .button-two {
-                color: $color-secondary;
-                &:after {
-                    filter: invert(1)
-                }
-            }
-        }
-    }
-    &__item {
-        &:nth-of-type(even) .grid-area__content {
-            background-color: $color-secondary;
-            & h2 {
-                width: 80%;
-            }
         }
     }
     &__content {
@@ -160,8 +196,104 @@ body {
     }
 }
 
+/*------------------------------------*\
+    Stories Items
+\*------------------------------------*/
 
+.stories-area {
+    @include flex-row;
+    &__item {
+        position: relative;
+        background-size: cover;
+        width: 25%;
+        object-fit: cover;
+        height: 500px;
+        transition: transform 0.5s ease-in-out;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.27%, rgba(0, 0, 0, 0.661222) 100%);
+        }
+        &:hover {
+            cursor: pointer;
+                transform: translateY(-16px);
+        }
+    }
+    &__media {
+        height: 100%;
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        z-index: 2;
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        right: 40px;
+        color: $color-secondary;
+        width: 78%;
+        margin: auto;
+    }
+    & h3 {
+        color: $color-secondary;
+        margin-bottom: .4rem;
+    }
+    p:last-of-type {
+        margin-bottom: 1.6rem; 
+    }
+    & hr {
+        color: $color-tertiary;
+        border-style: solid none none;
+        opacity: .6;
+        margin: 0 0 2rem 0;
+    }
+    & .button-two {
+        color: $color-secondary;
+        &:after {
+            filter: invert(1)
+        }
+    }
+}
 
+/*------------------------------------*\
+    Features Items
+\*------------------------------------*/
+
+.features-area {
+    padding: 12rem 0;
+    & .l-container {
+        gap: 3rem
+    }
+    &__item {
+        @include flex-column;
+        align-items: center;
+        justify-content: space-between;
+        width: 32%;
+        text-align: center;
+        height: 236px;
+    }
+    &__media {
+        @include flex-column;
+        justify-content: space-around;
+        flex: 1;
+        margin-bottom: 4.8rem;
+    }
+    & h3 {
+        flex: 1;
+        margin-bottom: 1.6rem;
+    }
+    & p {
+        flex: 1;
+        margin: aut;
+    }
+}
 
 /*------------------------------------*\
     Footer
@@ -184,6 +316,9 @@ body {
         & img {
             filter: sepia(100%) grayscale(100%) brightness(20);
             width: 100%;
+            &:hover {
+                filter: none;
+            }
         }
     }
 }
